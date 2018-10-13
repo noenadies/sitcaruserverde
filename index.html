@@ -5,7 +5,8 @@
 
     <style>
         #map {
-         height: 400px;
+          z-index: 1;
+         height: 100%;
          width: 100%;
         }
 
@@ -27,6 +28,7 @@ box-shadow: 5px 5px 15px 5px #20A4FF;
 top: 450px;
         }
         #didivdp{background-color:#AEC6CF;
+          z-index:  2221;
 position: absolute;
 top: 550px;
           -webkit-box-shadow: 5px 5px 15px 5px #20A4FF; 
@@ -139,6 +141,8 @@ height: 30px;background-color:#44c767;
   <br><div id ="dividp" ></div><p id ="idp">This is some text in a paragraph.</p></div>
     
     <script>
+      var w = window.innerWidth;
+var h = window.innerHeight;
 
 document.getElementById("idbtrefres").style.display = "none";
 
