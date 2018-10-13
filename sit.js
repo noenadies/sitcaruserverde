@@ -130,12 +130,14 @@ setTimeout(reload, 2000);
 
 function logeado(){
 traerdef(nodeusersit);
-
+alert(h);
 varcarlat=parseFloat(general[nodousuario].lat);
 varcarlng=parseFloat(general[nodousuario].lng);
 
 document.getElementById("idlog").style.display = "none";
 document.getElementById("map").style.display = "flex";
+document.getElementById("map").style.height=String(h)+"px";
+document.getElementById("map").style.width=String(w)+"px";
 document.getElementById("dividp").style.display = "flex";
 
 document.getElementById("idp").style.display = "flex";
