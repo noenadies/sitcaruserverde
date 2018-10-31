@@ -97,7 +97,30 @@ setTimeout(logeado(), 1000);
 
 
 }
+function login2(){
+//ahorasi(st1,st2,st3);
 
+//setTimeout(hacermarcas, 2000);
+traerdef(nodeusersit);
+
+//lemail=getidvalor("idemail");
+//lpass=getidvalor("idpass");
+alert("buscar");
+//console.log("general "+general);
+for(var i in general){
+  if(general[i].keymi==lemail&&general[i].pass==lpass){
+ //   ahorasi(nodeusersit,general[i].keymi,"buscar");
+    nodousuario=general[i].keymi;
+
+setTimeout(logeado(), 1000);
+}
+  else{
+      //alert("pas o email erroneo");
+  }
+}
+
+
+}
 
 function activar(){
 
@@ -118,6 +141,36 @@ setTimeout(reload, 2000);
       //alert("pas o email erroneo");
   }
 }
+
+}
+
+
+function activar2(){
+
+  //ahorasi(st1,st2,st3);
+
+//setTimeout(hacermarcas, 2000);
+traerdef(nodeusersit);
+//lemail=getidvalor("idemail");
+//lpass=getidvalor("idpass");
+for(var i in general){
+  if(general[i].keymi==lemail&&general[i].pass==lpass){
+    ahorasi(nodeusersit,general[i].keymi,"buscar");
+    nodousuario=general[i].keymi;
+//alert("buscando");
+setTimeout(login2, 2000);
+}
+  else{
+      //alert("pas o email erroneo");
+  }
+}
+
+}
+
+
+
+function nuevomap(){
+
 
 }
 
