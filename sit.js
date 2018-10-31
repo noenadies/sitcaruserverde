@@ -640,7 +640,7 @@ if(w<700){
 resdeandroid= window.Android.showToast("nodo","");
 resdeandroid =String(resdeandroid);
 document.getElementById("idh1").innerHTML=resdeandroid;
-resdeandroid="no"
+
 //resdeandroid="si";
  // nodousuario="auno1003";
 if(resdeandroid=="si"){
