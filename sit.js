@@ -1,7 +1,7 @@
 
 //3.377176, -73.495287
 
-
+//https://developer.android.com/reference/android/print/pdf/PrintedPdfDocument
 config = {
   apiKey: "AIzaSyDOfLv_05Bt6C2JRnD3UhfH7c2LrY6NfbE",
   authDomain: "porbarfirebase.firebaseapp.com",
@@ -154,6 +154,8 @@ document.getElementById("idpinforme").style.display = "block";
 
 document.getElementById("idbtrefres").style.display = "flex";
    document.getElementById("idbtinfo").style.display = "flex";
+
+     document.getElementById("idpinforme").style.top =String(h/2+h/4)+ "px";
 //varcarlat=4.646993;
 //varcarlng=-74.153212;
 
