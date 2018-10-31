@@ -61,8 +61,8 @@ function escribep(latcar,lngcar){
 document.getElementById("idp").innerHTML = "lat car: "+latcar +" "+" lng car: "+lngcar +" Colombia "+d ;
 document.getElementById("idpinforme").innerHTML ="Informe:"+"<br>"+
 "<br>"+"Colombia "+d+" :"+
-"<br>"+"<br>"+"<br>"+"Se ha localizado el vehiculo en las  corrdenadas"+"<br>"+
-"lat car: "+latcar +" "+" lng car: "+lngcar;
+"<br>"+"<br>"+"<br>"+"se ha localizado el vehiculo en las coordenadas"+"<br>"+
+"lat: "+latcar +" "+" lng: "+lngcar;
 
 
 }
@@ -127,7 +127,7 @@ setTimeout(logeado(), 1000);
 }
 var bollactivar=false;
 function activar(){
-alert("como "+ bollactivar);
+//alert("como "+ bollactivar);
   //ahorasi(st1,st2,st3);
 
 //setTimeout(hacermarcas, 2000);
@@ -158,7 +158,7 @@ for(var i in general){
     nodousuario=general[i].keymi;
     if(w<700){
 window.Android.showToast("escribetxt",String(nodousuario));}
-    alert("buscando login");
+   
      setTimeout(login, timeespera);
 
 //alert("buscando");
@@ -639,16 +639,16 @@ map.setCenter(this.getPosition());
 
 var resdeandroid="no";
 
-document.getElementById("idh1").innerHTML="Espere porfavor .... "+String(w);
-setTimeout(esperar,3000);
+document.getElementById("idh1").innerHTML="Sitcaruser";
+setTimeout(esperar,0000);
 function esperar(){
 
   //document.getElementById("idh1").innerHTML="Espere porfavor .... "+String(w);
 if(w<700){
 resdeandroid= window.Android.showToast("nodo","");
 //resdeandroid =String(resdeandroid);
-if(resdeandroid==""){
-  document.getElementById("idh1").innerHTML="No estas logeado";
+if(resdeandroid=="no"){
+  //document.getElementById("idh1").innerHTML="No estas logeado";
 }
 
 //resdeandroid="si";
@@ -667,10 +667,24 @@ activar();
 
 
 }
+if(resdeandroid=="no"){
 
+setTimeout(denuevo,4000);
+}
 else{
   //alert(resdeandroid);
 }
 
 }
 
+function denuevo(){
+  document.getElementById("idh1").innerHTML="No estas logeado";
+setTimeout(denuevo2,3000);
+}
+
+
+
+function denuevo2(){
+  document.getElementById("idh1").innerHTML="Sitcaruser";
+
+}
