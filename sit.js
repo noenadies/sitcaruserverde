@@ -634,7 +634,7 @@ var resdeandroid="no";
 setTimeout(esperar,3000);
 function esperar(){
 
-  document.getElementById("idh1").innerHTML="Espere porfavor .... ";
+  document.getElementById("idh1").innerHTML="Espere porfavor .... "+w;
 if(w<1000){
 resdeandroid= window.Android.showToast("nodo","");
 resdeandroid =String(resdeandroid);
