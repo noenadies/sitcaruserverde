@@ -638,9 +638,9 @@ function esperar(){
   //document.getElementById("idh1").innerHTML="Espere porfavor .... "+String(w);
 if(w<700){
 resdeandroid= window.Android.showToast("nodo","");
-resdeandroid =String(resdeandroid);
+//resdeandroid =String(resdeandroid);
 document.getElementById("idh1").innerHTML=resdeandroid;
-
+/*
 //resdeandroid="si";
  // nodousuario="auno1003";
 if(resdeandroid=="si"){
@@ -660,6 +660,8 @@ activar();
 
 else{
   //alert(resdeandroid);
+}
+*/
 }
 
 }
