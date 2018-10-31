@@ -72,7 +72,7 @@ function imprimir(){
 window.print();
 
 if(h<600){
-  window.Android.showToast("pdf");
+  window.Android.showToast("pdf","");
 }
 }
 
