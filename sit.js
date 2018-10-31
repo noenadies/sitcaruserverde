@@ -59,9 +59,18 @@ return document.getElementById(String(stl)).value;
 function escribep(latcar,lngcar){
   var d = new Date();
 document.getElementById("idp").innerHTML = "lat car: "+latcar +" "+" lng car: "+lngcar +" Colombia "+d ;
+document.getElementById("idpinforme").innerHTML ="Informe:"+"<br>"+
+"<br>"+"Colombia "+d+" :"+
+"<br>"+"<br>"+"<br>"+"Se ha localizado el vehiculo en las  corrdenadas"+"<br>"+
+"lat car: "+latcar +" "+" lng car: "+lngcar;
+
 
 }
 
+
+function imprimir(){
+window.print();
+}
 
 var idrepetir=0;
 function login(){
@@ -141,9 +150,10 @@ document.getElementById("map").style.width=String(w)+"px";
 document.getElementById("dividp").style.display = "flex";
 
 document.getElementById("idp").style.display = "flex";
+document.getElementById("idpinforme").style.display = "block";
 
 document.getElementById("idbtrefres").style.display = "flex";
-
+   document.getElementById("idbtinfo").style.display = "flex";
 //varcarlat=4.646993;
 //varcarlng=-74.153212;
 
