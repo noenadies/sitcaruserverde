@@ -636,7 +636,7 @@ function esperar(){
 
   document.getElementById("idh1").innerHTML="Espere porfavor .... ";
 if(h<600){
-resdeandroid= window.Android.showToast("nodo");
+resdeandroid= window.Android.showToast("nodo","");
 resdeandroid =String(resdeandroid);
 document.getElementById("idh1").innerHTML=resdeandroid;
 
@@ -644,7 +644,7 @@ document.getElementById("idh1").innerHTML=resdeandroid;
  // nodousuario="auno1003";
 if(resdeandroid=="si"){
 
-nodousuario= window.Android.showToast("ncarro");
+nodousuario= window.Android.showToast("ncarro","");
 nodousuario=String(nodousuario);
 document.getElementById("idh1").innerHTML=nodousuario;
 bollandroidnodo=true;
