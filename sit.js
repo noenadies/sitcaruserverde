@@ -631,13 +631,13 @@ setTimeout(esperar,3000);
 function esperar(){
 if(w<700){
 resdeandroid= window.Android.showToast("nodo");
-nodousuario= window.Android.showToast("ncarro");
+
 
 //resdeandroid="si";
  // nodousuario="auno1003";
 if(resdeandroid=="si"){
 
-
+nodousuario= window.Android.showToast("ncarro");
 
 bollandroidnodo=true;
   bollactivar=true;
