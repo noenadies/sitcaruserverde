@@ -630,7 +630,7 @@ map.setCenter(this.getPosition());
 
 var resdeandroid="no";
 
-
+document.getElementById("idh1").innerHTML="Espere porfavor .... "+String(w);
 setTimeout(esperar,3000);
 function esperar(){
 
