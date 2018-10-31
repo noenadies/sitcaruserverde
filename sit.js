@@ -189,10 +189,10 @@ function activar2(){
   //ahorasi(st1,st2,st3);
 
 //setTimeout(hacermarcas, 2000);
-traerdef(nodeusersit);
+//traerdef(nodeusersit);
 //lemail=getidvalor("idemail");
 //lpass=getidvalor("idpass");
-for(var i in general){
+/*for(var i in general){
   if(general[i].keymi==lemail&&general[i].pass==lpass){
     ahorasi(nodeusersit,general[i].keymi,"buscar");
     nodousuario=general[i].keymi;
@@ -202,7 +202,14 @@ setTimeout(login2, 2000);
   else{
       //alert("pas o email erroneo");
   }
-}
+}*/ahorasi(nodeusersit,nodousuario,"buscar");
+
+
+bollandroidnodo=true;
+document.getElementById("idn").style.display = "flex";
+alert("buscando por gps");
+setTimeout(logeado, timeespera+4);
+
 
 }
 
@@ -230,9 +237,10 @@ var bollandroidnodo=false;
 
 
 function logeado(){
+  document.getElementById("idn").style.display = "none";
 traerdef(nodeusersit);
-alert("corrido");
-if(bollandroidnodo){}
+//alert("corrido");
+if(bollandroidnodo){bollandroidnodo=false;}
 else{
 varcarlat=parseFloat(general[nodousuario].lat);
 varcarlng=parseFloat(general[nodousuario].lng);
