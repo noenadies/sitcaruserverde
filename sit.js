@@ -259,7 +259,8 @@ document.getElementById("idbtrefres").style.display = "flex";
      else{
          document.getElementById("idbtinfo").style.display = "flex";
  document.getElementById("idbtinfo").style.top =String(h/2)+ "px";
-     }
+     } document.getElementById("idbtinfo").style.display = "flex";
+ document.getElementById("idbtinfo").style.top =String(h/2)+ "px";
 //varcarlat=4.646993;
 //varcarlng=-74.153212;
 
@@ -635,7 +636,7 @@ setTimeout(esperar,3000);
 function esperar(){
 
   //document.getElementById("idh1").innerHTML="Espere porfavor .... "+String(w);
-/*if(w<700){
+if(w<700){
 resdeandroid= window.Android.showToast("nodo","");
 resdeandroid =String(resdeandroid);
 document.getElementById("idh1").innerHTML=resdeandroid;
@@ -660,5 +661,5 @@ activar();
 else{
   //alert(resdeandroid);
 }
-*/
+
 }
