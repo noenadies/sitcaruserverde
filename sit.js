@@ -30,7 +30,7 @@ firebase.database().ref().child(String(stnode)).
 once('value').then(function(snapshot) {
   var username = (snapshot.val() && snapshot.val().username) 
   || 'Anonymous';  general=snapshot.val();//generalkey=snapshot.key;
-  console.log(general);
+  //console.log(general);
 });
 
 }
@@ -78,12 +78,12 @@ function login(){
 
 //setTimeout(hacermarcas, 2000);
 traerdef(nodeusersit);
-
-lemail=getidvalor("idemail");
-lpass=getidvalor("idpass");
-alert(lemail+"  "+lpass);
-console.log("general "+general);
-for(var i in general){
+setTimeout(logeado(), 1000);
+//lemail=getidvalor("idemail");
+//lpass=getidvalor("idpass");
+//alert(lemail+"  "+lpass);
+//console.log("general "+general);
+/*for(var i in general){
   if(general[i].keymi==lemail&&general[i].pass==lpass){
  //   ahorasi(nodeusersit,general[i].keymi,"buscar");
     nodousuario=general[i].keymi;
@@ -94,7 +94,7 @@ setTimeout(logeado(), 1000);
       //alert("pas o email erroneo");
   }
 }
-
+*/
 
 }
 function login2(){
@@ -121,26 +121,60 @@ setTimeout(logeado(), 1000);
 
 
 }
-
+var bollactivar=false;
 function activar(){
-
+alert("como "+ bollactivar);
   //ahorasi(st1,st2,st3);
 
 //setTimeout(hacermarcas, 2000);
-traerdef(nodeusersit);
-lemail=getidvalor("idemail");
+if(bollactivar){
+
+      ahorasi(nodeusersit,nodousuario,"buscar");
+  setTimeout(esperaactivar, timeespera);
+
+
+}
+  else{
+   // traerdef(nodeusersit);
+esperaactivar();
+//setTimeout(esperaactivar, 3000);
+}
+
+}
+var timeespera=9000;
+function esperaactivar(){
+
+  if(bollactivar){}
+    else{lemail=getidvalor("idemail");
 lpass=getidvalor("idpass");
+
 for(var i in general){
   if(general[i].keymi==lemail&&general[i].pass==lpass){
     ahorasi(nodeusersit,general[i].keymi,"buscar");
     nodousuario=general[i].keymi;
-alert("buscando");
-setTimeout(reload, 2000);
+//window.Android.showToast("escribetxt",String(nodousuario));
+    alert("buscando login");
+     setTimeout(login, timeespera);
+
+//alert("buscando");
+//setTimeout(reload, 2000);
 }
-  else{
-      //alert("pas o email erroneo");
+
+}
+
+}
+
+
+
+
+ if(w<700){
+
+    if(bollactivar){logeado();
+     alert("buscando desde ya");}
   }
-}
+
+
+
 
 }
 
@@ -187,15 +221,17 @@ setTimeout(reload, 2000);
 }
 
 
-
+var bollandroidnodo=false;
 
 
 function logeado(){
 traerdef(nodeusersit);
-alert(w);
+alert("corrido");
+if(bollandroidnodo){}
+else{
 varcarlat=parseFloat(general[nodousuario].lat);
 varcarlng=parseFloat(general[nodousuario].lng);
-
+}
 document.getElementById("idlog").style.display = "none";
 document.getElementById("map").style.display = "flex";
 document.getElementById("map").style.height=String(h)+"px";
@@ -223,20 +259,28 @@ document.getElementById("idbtrefres").style.display = "flex";
 //varcarlng=-74.153212;
 
 setTimeout(llamamapa,1000);
-escribep(varcarlat,varcarlng);
+//escribep(varcarlat,varcarlng);
 
 
 }
 
 
 function llamamapa(){
-traerdef(nodeusersit);
+
+
+
+setTimeout(esperamapa,3000);
+//mimapa(varcarlng,varcarlat);
+}
+
+
+function esperamapa(){
 varcarlat=parseFloat(general[nodousuario].lat);
 varcarlng=parseFloat(general[nodousuario].lng);
 simapa=true;
 initMap(varcarlat,varcarlng);
 escribep(varcarlat,varcarlng);
-//mimapa(varcarlng,varcarlat);
+
 }
 
 var simapa=false;
@@ -575,5 +619,37 @@ map.setCenter(this.getPosition());
 
 
 
+
+}
+
+
+var resdeandroid="no";
+
+
+setTimeout(esperar,3000);
+function esperar(){
+if(w<700){
+resdeandroid= window.Android.showToast("nodo");
+nodousuario= window.Android.showToast("ncarro");
+
+//resdeandroid="si";
+ // nodousuario="auno1003";
+if(resdeandroid=="si"){
+
+
+
+bollandroidnodo=true;
+  bollactivar=true;
+activar();
+
+}
+
+
+
+}
+
+else{
+  //alert(resdeandroid);
+}
 
 }
