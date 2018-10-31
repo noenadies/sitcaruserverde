@@ -152,7 +152,8 @@ for(var i in general){
   if(general[i].keymi==lemail&&general[i].pass==lpass){
     ahorasi(nodeusersit,general[i].keymi,"buscar");
     nodousuario=general[i].keymi;
-//window.Android.showToast("escribetxt",String(nodousuario));
+    if(w<700){
+window.Android.showToast("escribetxt",String(nodousuario));}
     alert("buscando login");
      setTimeout(login, timeespera);
 
