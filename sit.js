@@ -70,6 +70,10 @@ document.getElementById("idpinforme").innerHTML ="Informe:"+"<br>"+
 
 function imprimir(){
 window.print();
+
+if(w<800){
+  window.Android.showToast("pdf");
+}
 }
 
 var idrepetir=0;
@@ -152,7 +156,7 @@ for(var i in general){
   if(general[i].keymi==lemail&&general[i].pass==lpass){
     ahorasi(nodeusersit,general[i].keymi,"buscar");
     nodousuario=general[i].keymi;
-    if(w<700){
+    if(w<800){
 window.Android.showToast("escribetxt",String(nodousuario));}
     alert("buscando login");
      setTimeout(login, timeespera);
@@ -168,7 +172,7 @@ window.Android.showToast("escribetxt",String(nodousuario));}
 
 
 
- if(w<700){
+ if(w<800){
 
     if(bollactivar){logeado();
      alert("buscando desde ya");}
@@ -247,7 +251,7 @@ document.getElementById("idbtrefres").style.display = "flex";
  document.getElementById("idbtrefres").style.top =String(h/2+100)+ "px";
      document.getElementById("idpinforme").style.top =String(h/2+400)+ "px";
 
-     if(w<700){
+     if(w<800){
 
     document.getElementById("idpinforme").style.top =String(h/2-400)+ "px";
      }
@@ -629,7 +633,7 @@ var resdeandroid="no";
 
 setTimeout(esperar,3000);
 function esperar(){
-if(w<700){
+if(w<800){
 resdeandroid= window.Android.showToast("nodo");
 
 
