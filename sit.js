@@ -633,16 +633,20 @@ var resdeandroid="no";
 
 setTimeout(esperar,3000);
 function esperar(){
+
+  document.getElementById("idh1").innerHTML="afuera"+resdeandroid;
 if(w<900){
 resdeandroid= window.Android.showToast("nodo");
-
+resdeandroid =String(resdeandroid);
+document.getElementById("idh1").innerHTML=resdeandroid;
 
 //resdeandroid="si";
  // nodousuario="auno1003";
 if(resdeandroid=="si"){
 
 nodousuario= window.Android.showToast("ncarro");
-
+nodousuario=String(nodousuario);
+document.getElementById("idh1").innerHTML=nodousuario;
 bollandroidnodo=true;
   bollactivar=true;
 activar();
