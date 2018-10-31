@@ -156,7 +156,7 @@ document.getElementById("idbtrefres").style.display = "flex";
    document.getElementById("idbtinfo").style.display = "flex";
  document.getElementById("idbtinfo").style.top =String(h/2)+ "px";
  document.getElementById("idbtrefres").style.top =String(h/2+100)+ "px";
-     document.getElementById("idpinforme").style.top =String(h/2+200)+ "px";
+     document.getElementById("idpinforme").style.top =String(h/2+400)+ "px";
 //varcarlat=4.646993;
 //varcarlng=-74.153212;
 
