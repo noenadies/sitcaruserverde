@@ -37,6 +37,8 @@ once('value').then(function(snapshot) {
 
 
 
+var vlat=0;
+var vlng=0;
 
 
 
@@ -244,6 +246,10 @@ if(bollandroidnodo){bollandroidnodo=false;}
 else{
 varcarlat=parseFloat(general[nodousuario].lat);
 varcarlng=parseFloat(general[nodousuario].lng);
+  my=varcarlat;//4.6474131;//mx
+     mx=varcarlng;//-74.1543345; //my
+
+
 }
 document.getElementById("idlog").style.display = "none";
 document.getElementById("map").style.display = "flex";
@@ -704,13 +710,14 @@ function denuevo2(){
 }
 
 
-
+ my=0;//4.6474131;//mx
+mx=0;
 function esmapa3d(){
 
 
-    var my=4.6474131;//mx
-    var mx=-74.1543345; //my
-
+     my=varcarlat;//4.6474131;//mx
+     mx=varcarlng;//-74.1543345; //my
+console.log(my+"  l-nf   "+mx);
     require([
         "esri/Map",
         "esri/views/SceneView",
