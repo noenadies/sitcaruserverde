@@ -259,6 +259,9 @@ document.getElementById("idbtrefres").style.display = "flex";
  document.getElementById("idbtrefres").style.top =String(h/2+100)+ "px";
      document.getElementById("idpinforme").style.top =String(h/2+400)+ "px";
 
+
+        document.getElementById("idbtotromap").style.display ="flex";
+
      if(w<700){
 
     document.getElementById("idpinforme").style.top =String(h/2-400)+ "px";
@@ -266,7 +269,7 @@ document.getElementById("idbtrefres").style.display = "flex";
 
      else{
          document.getElementById("idbtinfo").style.display = "flex";
- document.getElementById("idbtinfo").style.top =String(h/2)+ "px";
+   document.getElementById("idpinforme").style.top =String(h/2-400)+ "px";
      } document.getElementById("idbtinfo").style.display = "flex";
  document.getElementById("idbtinfo").style.top =String(h/2)+ "px";
 //varcarlat=4.646993;
@@ -688,3 +691,181 @@ function denuevo2(){
   document.getElementById("idh1").innerHTML="Sitcaruser";
 
 }
+
+
+
+function esmapa3d(){
+
+
+    var my=4.6474131;//mx
+    var mx=-74.1543345; //my
+
+    require([
+        "esri/Map",
+        "esri/views/SceneView",
+        "esri/layers/GraphicsLayer",
+        "esri/Graphic"
+      ],
+      function(
+        Map, SceneView, GraphicsLayer, Graphic
+      ) {
+
+        var mapz = new Map({
+          basemap: "hybrid"
+        });
+
+        var view = new SceneView({
+          container: "viewDiv",
+          map: mapz,
+
+          camera: { // autocasts as new Camera()
+            position: { // autocasts as new Point()
+              x: mx,
+              y: my,
+              z: 1266.7049653716385
+            },
+            heading: -91.5734445102566290225,
+            tilt: -82.95536300536367,
+          }
+        });
+
+        /*********************
+         * Add graphics layer
+         *********************/
+
+        var graphicsLayer = new GraphicsLayer();
+        mapz.add(graphicsLayer);
+
+        /*************************
+         * Add a 3D point graphic
+         *************************/
+
+        // London
+        var point = {
+          type: "point", // autocasts as new Point()
+          x:mx,
+          y: my,
+          z: 1010
+        };
+
+        markerSymbol = {
+          type: "simple-marker", // autocasts as new SimpleMarkerSymbol()
+          color: [226, 119, 40],
+          outline: { // autocasts as new SimpleLineSymbol()
+            color: [255, 255, 255],
+            width: 2
+          }
+        };
+
+        var pointGraphic = new Graphic({
+          geometry: point,
+          symbol: markerSymbol
+        });
+
+        graphicsLayer.add(pointGraphic);
+
+        /****************************
+         * Add a 3D polyline graphic
+         ****************************/
+
+        var polyline = {
+          type: "polyline", // autocasts as new Polyline()
+          paths: [
+            [mx, my, 0],
+            [mx, my, 1000]
+          ]
+        };
+
+        lineSymbol = {
+          type: "simple-line", // autocasts as SimpleLineSymbol()
+          color: [226, 119, 40],
+          width: 4
+        };
+
+        var polylineGraphic = new Graphic({
+          geometry: polyline,
+          symbol: lineSymbol
+        });
+
+        graphicsLayer.add(polylineGraphic);
+
+        /***************************
+         * Add a 3D polygon graphic
+         ***************************/
+
+        var polygon = {
+          type: "polygon", // autocasts as new Polygon()
+          rings: [
+            [-0.184, 51.48391, 400],
+            [-0.184, 51.49091, 500],
+            [-0.172, 51.49091, 500],
+            [-0.172, 51.48391, 400],
+            [-0.184, 51.48391, 400]
+          ]
+        };
+
+        var fillSymbol = {
+          type: "simple-fill", // autocasts as new SimpleFillSymbol()
+          color: [227, 139, 79, 0.8],
+          outline: { // autocasts as new SimpleLineSymbol()
+            color: [255, 255, 255],
+            width: 1
+          }
+        };
+
+        var polygonGraphic = new Graphic({
+          geometry: polygon,
+          symbol: fillSymbol
+        });
+
+        graphicsLayer.add(polygonGraphic);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      });
+}
+
+
+
+function  nomostrar(){
+
+
+  document.getElementById("idn").style.display = "none";
+
+document.getElementById("idlog").style.display = "none";
+document.getElementById("map").style.display = "none";
+
+document.getElementById("dividp").style.display ="none";
+
+document.getElementById("idp").style.display = "none";
+document.getElementById("idpinforme").style.display = "block";
+
+document.getElementById("idbtrefres").style.display = "none";
+
+
+         document.getElementById("idbtinfo").style.display ="none";
+
+      document.getElementById("idbtinfo").style.display ="none";
+
+ //document.getElementById("idt1").style.display ="none";
+  document.getElementById("idt").style.display ="none";
+        document.getElementById("viewDiv").style.display = "flex";
+
+        document.getElementById("viewDiv").style.height = String(h)+"px";
+
+  
+esmapa3d();
+}
+
+//setTimeout(nomostrar,10000);

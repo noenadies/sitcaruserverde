@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" >
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Add Graphics to a SceneView - 4.9</title>
 
+  <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.9/"></script>
 <head>
 
     <style>
+
+   #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 0px;
+      width: 100%;
+      z-index: 200;
+      display: none;
+    }
+
         #map {
           z-index: 1;
          height: 100%;
@@ -71,7 +86,7 @@ background-color:#44c767;
   font-size: 14px;
 
 
-
+width:4%; 
 
 
 
@@ -110,10 +125,48 @@ background-color:#44c767;
   font-style: oblique;
   font-weight: lighter;
   font-size: 14px;
+
+  width:4%; 
 }
+
+#idbtotromap{
+
+
+  text-align: center;
+  position: absolute;
+  top: 210px;
+  left: 10px;
+  z-index: 300;
+
+  
+
+background-color:#44c767;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:1px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+
+
+width:4%; 
+
+
+}
+
+
+
+
+
 #idpinforme{
 
-          z-index:  2223;
+          z-index:  280;
           -webkit-box-shadow: 5px 5px 15px 5px #20A4FF; 
 box-shadow: 5px 5px 15px 5px #20A4FF;
           font-family: Georgia, serif;
@@ -130,7 +183,7 @@ box-shadow: 5px 5px 15px 5px #20A4FF;
           background: #fffeff;
           opacity: 0.6;
     filter: alpha(opacity=60); /* For IE8 and earlier */
-top: 750px;
+top: 550px;
 
 
 }
@@ -169,7 +222,27 @@ background-color: #082B2D;
 
 
 
-  
+
+}
+
+
+
+
+
+#idt1{
+
+
+  width:100%;
+  height: :100%; 
+}
+
+#idt{
+
+
+  width:100%;
+  height: :100%;
+  display: flex;
+  margin: auto; 
 }
 
      </style>
@@ -184,11 +257,16 @@ background-color: #082B2D;
 </head>
 
 <body>
-
+<div id="idt">
   <div id="idlog" class="wrapper">
 	<div class="container">
 		<h1 id="idh1">Sitcaruser</h1>
 		
+
+
+
+
+
 		<div id="idlog" class="form" action="" method="">	
 			<input id="idemail" type="text" placeholder="Username">
 			<input id="idpass" type="password" placeholder="Password">
@@ -214,7 +292,7 @@ background-color: #082B2D;
 </div>
 
 
-  
+
 
 
 
@@ -222,25 +300,13 @@ background-color: #082B2D;
 
 
     <div id="map"><p id ="idp2">This is some text in a paragraph.</p></div>
-    <div id="controls">
-      <div></div>
-      <input type="checkbox" id="geodesic">
-      
-
-     
-    </div>
 
 
 
 
-             </div>
- 
 
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-
-</script>
+         
+  <button id ="idbtotromap" class="butn" onclick="nomostrar()">Android 7</button>
 
  <button id ="idbtrefres" class="butn" onclick="activar2()">Buscar</button><br><br><br>
   <button id ="idbtinfo" class="butn" onclick="imprimir()">Guardar</button>
@@ -250,16 +316,31 @@ background-color: #082B2D;
 
 <p id ="idpinforme">This is some text in a paragraph.</p>
 
-</div>
+
     
 <div id="idn"><div id="idn1">
   Porfavor espera se estan activando los satelites gps...
 
 </div></div>
+
+</div>
+
+
+ <div id="viewDiv"></div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+
+
     <script>
       var w = window.innerWidth;
 var h = window.innerHeight;
-document.getElementById("idn").style.height = String(h)+"px";
+document.getElementById("idt").style.height = String(h)+"px";
+
+
+document.getElementById("idn").style.top =String(h/2)+"px";
 document.getElementById("idbtrefres").style.display = "none";
 
       document.getElementById("idp").style.display = "none";
@@ -268,6 +349,12 @@ document.getElementById("idbtrefres").style.display = "none";
   document.getElementById("idpinforme").style.display = "none";
    document.getElementById("idbtinfo").style.display = "none";
  document.getElementById("idn").style.display = "none";
+
+      document.getElementById("viewDiv").style.display ="none";
+
+   document.getElementById("idbtotromap").style.display ="none";
+
+
   
     </script>
    
