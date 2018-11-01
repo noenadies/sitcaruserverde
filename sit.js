@@ -252,7 +252,7 @@ document.getElementById("map").style.width=String(w)+"px";
 document.getElementById("dividp").style.display = "flex";
 
 document.getElementById("idp").style.display = "flex";
-document.getElementById("idpinforme").style.display = "block";
+document.getElementById("idpinforme").style.display = "flex;
 
 document.getElementById("idbtrefres").style.display = "flex";
 
@@ -872,9 +872,9 @@ esmapa3d();
 
 //setTimeout(nomostrar,10000);
 
-function  nomostrar1(){
+function  nomostrar1(){  document.getElementById("idpinforme").style.display = "flex";
     document.getElementById("idt").style.display ="flex";
-      document.getElementById("idpinforme").style.display = "flex";
+
    document.getElementById("idbtotromap1").style.display ="none";
  document.getElementById("viewDiv").style.display = "none";
 activar2();
