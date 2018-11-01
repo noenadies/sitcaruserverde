@@ -249,7 +249,7 @@ document.getElementById("idlog").style.display = "none";
 document.getElementById("map").style.display = "flex";
 document.getElementById("map").style.height=String(h)+"px";
 document.getElementById("map").style.width=String(w)+"px";
-document.getElementById("dividp").style.display = "flex";
+document.getElementById("dividp").style.display = "none";
 
 document.getElementById("idp").style.display = "flex";
 document.getElementById("idpinforme").style.display = "flex";
@@ -271,8 +271,9 @@ document.getElementById("idbtrefres").style.display = "flex";
          document.getElementById("idbtinfo").style.display = "flex";
    document.getElementById("idpinforme").style.top =String(h/2-400)+ "px";
      } document.getElementById("idbtinfo").style.display = "flex";
-
-        document.getElementById("idpinforme").style.top =String(h/2-400)+ "px";
+document.getElementById("idpinforme").style.position = "absolute";
+        document.getElementById("idpinforme").style.top =String(h/2-h*0.3)+ "px";
+         document.getElementById("idpinforme").style.left =String(w/2-w*0.2)+ "px";
  document.getElementById("idbtinfo").style.top =String(h/2)+ "px";
 //varcarlat=4.646993;
 //varcarlng=-74.153212;
@@ -851,7 +852,7 @@ document.getElementById("map").style.display = "none";
 document.getElementById("dividp").style.display ="none";
 
 document.getElementById("idp").style.display = "none";
-document.getElementById("idpinforme").style.display = "block";
+document.getElementById("idpinforme").style.display = "none";
 
 document.getElementById("idbtrefres").style.display = "none";
 
