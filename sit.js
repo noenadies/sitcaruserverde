@@ -279,7 +279,7 @@ document.getElementById("idpinforme").style.position = "absolute";
 //varcarlng=-74.153212;
 
 
-if(w<645)
+if(w<600)
 {
 document.getElementById("idpinforme").style.display = "none";
 
