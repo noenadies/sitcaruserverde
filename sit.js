@@ -289,7 +289,7 @@ if(w<600)
 {
 document.getElementById("idpinforme").style.display = "none";
 
-document.getElementById("idp").style.fontSize = "23px";
+document.getElementById("idp").style.fontSize = "15px";
 
 }
 setTimeout(llamamapa,1000);
@@ -717,7 +717,7 @@ function esmapa3d(){
 
 document.getElementById("idp").style.display = "flex";
 
-document.getElementById("idp").style.fontSize = "23px";
+document.getElementById("idp").style.fontSize = "15px";
      my=varcarlat;//4.6474131;//mx
      mx=varcarlng;//-74.1543345; //my
 console.log(my+"  l-nf   "+mx);
