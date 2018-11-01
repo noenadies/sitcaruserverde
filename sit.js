@@ -271,6 +271,8 @@ document.getElementById("idbtrefres").style.display = "flex";
          document.getElementById("idbtinfo").style.display = "flex";
    document.getElementById("idpinforme").style.top =String(h/2-400)+ "px";
      } document.getElementById("idbtinfo").style.display = "flex";
+
+        document.getElementById("idpinforme").style.top =String(h/2-400)+ "px";
  document.getElementById("idbtinfo").style.top =String(h/2)+ "px";
 //varcarlat=4.646993;
 //varcarlng=-74.153212;
@@ -872,6 +874,7 @@ esmapa3d();
 
 function  nomostrar1(){
     document.getElementById("idt").style.display ="flex";
+      document.getElementById("idpinforme").style.display = "flex";
    document.getElementById("idbtotromap1").style.display ="none";
  document.getElementById("viewDiv").style.display = "none";
 activar2();
