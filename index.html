@@ -167,7 +167,7 @@ width:4%;
   text-align: center;
   position: absolute;
   top: 210px;
-  left: 110px;
+  left: 10px;
   z-index: 3000;
 
   
@@ -357,7 +357,7 @@ background-color: #082B2D;
 
  <div id="viewDiv"></div>
 
-<button id ="idbtotromap1" class="butn" onclick="nomostrar1()">Android 7</button>
+<button id ="idbtotromap1" class="butn" onclick="nomostrar1()">Volver</button>
 
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 
@@ -367,7 +367,7 @@ background-color: #082B2D;
       var w = window.innerWidth;
 var h = window.innerHeight;
 document.getElementById("idt").style.height = String(h)+"px";
-
+document.getElementById("idbtotromap1").style.top = String(h/2+h*0.2)+"px";
 
 document.getElementById("idn").style.top =String(h/2)+"px";
 document.getElementById("idbtrefres").style.display = "none";
