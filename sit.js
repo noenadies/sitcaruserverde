@@ -278,6 +278,14 @@ document.getElementById("idpinforme").style.position = "absolute";
 //varcarlat=4.646993;
 //varcarlng=-74.153212;
 
+
+if(w<680)
+{
+document.getElementById("idpinforme").style.display = "none";
+
+document.getElementById("idp").style.fontSize = "15px";
+
+}
 setTimeout(llamamapa,1000);
 //escribep(varcarlat,varcarlng);
 
