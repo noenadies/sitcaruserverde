@@ -839,7 +839,7 @@ function esmapa3d(){
 
 
 function  nomostrar(){
-
+   document.getElementById("idbtotromap1").style.display ="flex";
 
   document.getElementById("idn").style.display = "none";
 
@@ -869,3 +869,10 @@ esmapa3d();
 }
 
 //setTimeout(nomostrar,10000);
+
+function  nomostrar1(){
+    document.getElementById("idt").style.display ="flex";
+   document.getElementById("idbtotromap1").style.display ="none";
+ document.getElementById("viewDiv").style.display = "none";
+activar2();
+}
