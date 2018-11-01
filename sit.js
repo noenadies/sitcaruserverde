@@ -610,8 +610,8 @@ function initMap(slt,sln) {
       draggable: true
   });*/
 //arraymarkes.push();
-var image="https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/32/Map-Marker-Marker-Inside-Chartreuse.png";
-image="gpscar.png";
+//var image="https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/32/Map-Marker-Marker-Inside-Chartreuse.png";
+var image="gpscar.png";
 if(simapa){
     var marker = new google.maps.Marker({
       position:{lat:slt, lng:sln},
