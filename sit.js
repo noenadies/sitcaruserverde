@@ -252,7 +252,7 @@ document.getElementById("map").style.width=String(w)+"px";
 document.getElementById("dividp").style.display = "flex";
 
 document.getElementById("idp").style.display = "flex";
-document.getElementById("idpinforme").style.display = "flex;
+document.getElementById("idpinforme").style.display = "flex";
 
 document.getElementById("idbtrefres").style.display = "flex";
 
